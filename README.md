@@ -6,31 +6,31 @@ Acknowledgements: Mr. Kuszmaul, https://socratic.org/questions/how-do-i-find-the
 ## Methods
 
 ### Complex class
-add
+add: adds complex numbers
 
-subtract
+subtract: subtracts complex numbers
 
-divide
+divide: divides complex numbers
 
-multiply
+multiply: multiply complex numbers
 
-exp - exponent
+exp: complex number to exponent
 
-rootOfUnity
+rootOfUnity: returns root of unity for a complex number
 
-rootsOfUnity
+rootsOfUnity: returns array of roots of unities for array of complex numbers
 
 ### Polynomial Class
 
-evaluate
+evaluate: substitues x in polynomial for a complex number
 
-evaluateALL
+evaluateALL: evaluates a list of complex numbers
 
-FourierTransform
+FourierTransform: applies fourier transformation to a polynomial
 
-sythetic_div
+sythetic_div: divides it fast
 
-evenEval
+evenEval: evaluates all the polynomials with even exponents
 
-oddEval
+oddEval: evaluates all the polynomials with odd exponents
  
