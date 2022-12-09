@@ -1,7 +1,7 @@
 import java.lang.Math;
 public class Polynomial {
     Complex[] coeffs;
-//pos in array represents x to the power of pos
+    //pos in array represents x to the power of pos
     public Polynomial(Complex[] _coeffs){
         coeffs = _coeffs;
     }
@@ -31,7 +31,7 @@ public class Polynomial {
         }
         return retval;
     }
-
+    //divides by half
     public double[] sythetic_div(double[]num, double[] den) {
         double[] retval = num.clone();
         double norm = den[0];
@@ -47,23 +47,22 @@ public class Polynomial {
         return retval;
     }
 
-    public Complex[] eveneval(int x){
+    //only evaluates even exponent terms of poly
+    public Complex[] evenEval(Complex V){
+        Complex[] retval = new Complex[coeffs.length/2];
         for(int i =0; i<coeffs.length;i=i+2) {
-            
+            retval[i/2]=evaluate(V,i);
         }
+        return retval;
     }
-
-    public Complex[] oddval(int x){
+    //only evaluates odd exponent terms of poly
+    public Complex[] oddEval(Complex V){
+        Complex[] retval = new Complex[coeffs.length/2];
         for(int i =1; i<coeffs.length;i=i+2) {
-
+            retval[i/2]=evaluate(V,i);
         }
+        return retval;
     }
-
-
-    //e ^(i2pik)/8
-    // cos (2pik)/8 (x coord)+ i sin(2pik)/8 (y coord)
-
-    //w 8 ^ 1 is half the unit circle away from w 8 ^5
 }
 
 
