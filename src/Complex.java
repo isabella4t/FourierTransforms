@@ -62,4 +62,8 @@ public class Complex {
         return comp;
     }
 
+    public String toString(){
+        return "Real: " + real + " Imag: " + imag;
+    }
+
 }
