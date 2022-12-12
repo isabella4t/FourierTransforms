@@ -63,6 +63,22 @@ public class Polynomial {
         }
         return retval;
     }
+
+    public String toString(){
+        String ret = "";
+        for(int i =0; i<coeffs.length;i++){
+            ret += " " +  coeffs[i].toString()+ ",";
+        }
+        return ret;
+    }
+
+    public String toString(Complex[] e){
+        String ret = "";
+        for(int i =0; i<e.length;i++){
+            ret += " " +  e[i].toString()+ ",";
+        }
+        return ret;
+    }
 }
 
 
