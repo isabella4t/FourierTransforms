@@ -15,6 +15,7 @@ public class Main {
         testFouriertransform();
         testFastFourierTransform();
         testConvolutions();
+        compareConvoPoly();
     }
 
     public static void testadd(){
@@ -96,6 +97,30 @@ public class Main {
         int[] kern = {0,0,1,0};
         System.out.println("convolutions");
         for(int n: me.oneDimentional(funk,kern)){
+            System.out.println(n);
+        }
+
+    }
+
+    public static void compareConvoPoly(){
+        Complex[] zo = {new Complex(8,0),new Complex(6,0),new Complex(1,0)};
+        Polynomial me = new Polynomial(zo);
+        System.out.println("poly");
+
+        for (int j=0;j<4;j++){
+            Complex[] ze = me.evaluateALL(new Complex(j,0));
+
+            Complex gr = new Complex(0,0);
+            for(Complex f:ze){
+                gr = gr.add(f);
+            }
+            System.out.println(gr.toString());
+        }
+        Convolution ge = new Convolution();
+        int[] funk = {8,6,1};
+        int[] kern = {0,0,1,0};
+        System.out.println("convolutions");
+        for(int n: ge.oneDimentional(funk,kern)){
             System.out.println(n);
         }
 
