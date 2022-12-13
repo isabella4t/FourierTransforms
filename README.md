@@ -34,3 +34,6 @@ evenEval: evaluates all the polynomials with even exponents
 
 oddEval: evaluates all the polynomials with odd exponents
  
+### Convolution class
+
+oneDimentional: takes a polynomial function and a kernel and returns dot product of it
